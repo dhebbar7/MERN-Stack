@@ -10,20 +10,20 @@ const app = express();
 app.use(bodyParser.json());
 
 //DB config
-// const db = require("./config/keys").mongoURI;
-const db = "mongodb://127.0.0.1:27017/mern-shopping";
+const db = require("./config/keys").mongoURI;
+//const db = "mongodb://127.0.0.1:27017/mern-shopping";
 
 //Connect to mongodb
-// mongoose
-//   .connect()
-//   .then(() => console.log("mongo connected"))
-//   .catch(error => console.log(err));
 mongoose
-  .connect(db)
-  .then(() =>
-    console.log("MongoDB database connection established successfully")
-  )
-  .catch(err => console.log(err));
+  .connect()
+  .then(() => console.log("mongo connected"))
+  .catch(error => console.log(err));
+// mongoose
+//   .connect(db)
+//   .then(() =>
+//     console.log("MongoDB database connection established successfully")
+//   )
+//   .catch(err => console.log(err));
 
 const port = process.env.PORT || 5000;
 
