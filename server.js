@@ -15,7 +15,7 @@ const db = require("./config/keys").mongoURI;
 
 //Connect to mongodb
 mongoose
-  .connect()
+  .connect(db)
   .then(() => console.log("mongo connected"))
   .catch(error => console.log(err));
 // mongoose
