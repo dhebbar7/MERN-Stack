@@ -5,10 +5,7 @@ const Schema = mongoose.Schema;
 //create schema
 
 const itemSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
+  name: {},
   date: {
     type: Date,
     default: Date.now
