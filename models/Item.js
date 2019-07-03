@@ -7,7 +7,6 @@ const Schema = mongoose.Schema;
 const itemSchema = new Schema({
   name: {},
   date: {
-    type: Date,
     default: Date.now
   }
 });
