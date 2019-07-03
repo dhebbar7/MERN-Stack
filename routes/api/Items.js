@@ -20,10 +20,14 @@ router.get("/", (req, res) => {
 // @access public
 
 router.post("/", (req, res) => {
+  //console.log(req.body);
   const newItem = new Item({
     name: req.body.name
   });
-  newItem.save().then(item => res.json(item));
+
+  newItem.save().then(item => {
+    res.json(item);
+  });
 });
 
 // @route DELETE api/items
